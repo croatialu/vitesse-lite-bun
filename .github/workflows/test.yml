@@ -13,7 +13,6 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
     steps:
       - uses: actions/checkout@v3
 
@@ -44,6 +43,8 @@ jobs:
     permissions:
       contents: write
     needs: lint
+    env:
+      VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
     steps:
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v1
