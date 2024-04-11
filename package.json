@@ -1,4 +1,5 @@
 {
+  "name": "vitesse-lite-bun",
   "type": "module",
   "private": true,
   "packageManager": "bun@1.1.3",
